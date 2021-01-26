@@ -54,3 +54,6 @@ RUN pip install --no-cache-dir nbgitpuller nibabel dipy pybids pynidm pydra-ml \
   datalad-osf
 RUN pip install --no-cache-dir --upgrade https://github.com/datalad/datalad/archive/d062f6f39315d6b82c287796e1c4c70ff4df6317.zip
 RUN pip install --no-cache-dir https://github.com/ReproNim/neurodocker/archive/f104933e7faf01ed3da7e3201cea469f9ddd87fe.zip
+
+RUN mkdir -p /home/$NB_USER/.singularity/build
+ENV SINGULARITY_TMPDIR=/home/$NB_USER/.singularity/build
